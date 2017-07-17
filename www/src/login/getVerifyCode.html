@@ -1,0 +1,26 @@
+<ion-view view-title="忘记密码" hide-nav-bar="true">
+    <ion-nav-bar class="bar-positive" align-title="center">
+        <ion-nav-back-button>
+            <!-- <i class="ion-ios-arrow-left"></i> -->
+        </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-content id="VerifyCode">
+        <div class="codeContainer" ng-form="obtainCode">
+            <div>
+                <img src="img/forgetpsw_phone@3x-min.png">
+                <input type="text" placeholder="请输入手机号" name="telNumber" ng-model="getVerifyCode.loginInfo.phoneNumber" ng-pattern="/^1[3|4|5|7|8]\d{9}$/" required>
+                <span ng-if="obtainCode.telNumber.$invalid && obtainCode.telNumber.$dirty">
+	 		<span class="errorTip" ng-if="obtainCode.telNumber.$invalid">请输入正确手机号码</span>
+                </span>
+            </div>
+            <div class="smsCode">
+                <img src="img/forgetpsw_psw@3x-min.png">
+                <input type="text" placeholder="短信验证码" name="veryCode" ng-model="getVerifyCode.loginInfo.code" required>
+                <span class="errorTip" ng-if="obtainCode.veryCode.$error.required&& obtainCode.veryCode.$touched">请输入验证码</span>
+                <div class="getCode button button-positive" ng-disabled="getVerifyCode.clickAble" ng-click="getVerifyCode.achieveCode()">{{getVerifyCode.getSmsCode}}</div>
+            </div>
+            <!-- ng-disabled="obtainCode.telNumber.$invalid"  -->
+            <a ng-click="getVerifyCode.setNewPwd()" class="nextStep button button-positive" ng-disabled="obtainCode.telNumber.$invalid||obtainCode.veryCode.$error.required">下一步</a>
+        </div>
+    </ion-content>
+</ion-view>

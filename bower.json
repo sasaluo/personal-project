@@ -1,0 +1,15 @@
+{
+  "name": "reservation-app",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.3.1"
+  },
+  "dependencies": {
+    "ngstorage": "^0.3.10",
+    "ng-file-upload": "^12.0.4",
+    "ngCordova": "^0.1.27-alpha",
+    "angular-qrcode": "monospaced/angular-qrcode#^6.2.1",
+    "requirejs": "^2.3.2",
+    "domReady": "^2.0.1"
+  }
+}

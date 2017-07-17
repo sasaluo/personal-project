@@ -1,0 +1,40 @@
+/*-------------------------------------- Global --------------------------------------*/
+html,body {width: 100%;height: 100%;font-family: tahoma,arial;}
+body ion-content {width: 100%;height: 100%;background: #f2f2f2;}
+ion-content .scroll {width: 100%;height: 100%;}
+button,input,textarea{font-family: tahoma,arial;}
+.button.button-assertive{background-color: #3391E9;}
+.button.button-assertive.active,.button.button-assertive.activated{background-color: #3391E9;}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar,
+[nav-bar-transition="ios"] [nav-bar="entering"] .bar,[nav-bar-transition="android"] [nav-bar="active"] .bar,[nav-bar-transition="android"] [nav-bar="entering"] .bar {
+    color: #fff;
+    background: #3390E8;
+}
+.noBorderLeft{border-left: none;}
+.noBorderTop{border-top:none;}
+.noBorderBottom{border-bottom: none;}
+
+ 
+input[type=number]::-webkit-inner-spin-button,  
+input[type=number]::-webkit-outer-spin-button {  
+    -webkit-appearance: none;  
+    margin: 0;  
+}
+/*---------------------------------------------poup-------------------------------------------------------------------------*/
+.popup-body{text-align: center;}
+.popup-body{text-align: center;color: #222222;font-size: 14px;}
+
+.popup-head{ border-bottom: 0;}
+.popup-container.active .popup{border-radius: 2px;}
+.popup-buttons .button{letter-spacing: 5px; border-radius: 5px;height: 37px;}
+.button.button-positive{background-color: #3391E9;}
+select{border:none;-webkit-appearance:none;background: none;font-family: tahoma,arial;}
+.has_error{color:#a94442;}
+.popupH2{color: #222;font-size: 18px;}
+.popupBody{font-size: 14px;color: #222;}
+.cancelPopup{height: 36px;background: #3391E9;color: #fff;line-height: 36px;text-align: center;width: 40%;display: inline-block;}
+.popup .button.button-stable{background: #eee;color: #C2C2C2;}
+.popup .button.button-stable.activated{background: #eee;color: #C2C2C2;border:1px #eee solid;}
+/*.popup-container .popup{width: 90%;}*/
+.errorArea{margin-left: 96px;}

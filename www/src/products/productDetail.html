@@ -1,0 +1,23 @@
+<ion-view view-title="{{productDetail.stateParam.viewTitle}}"  hide-back-button="true"  hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="productDetail.counterGoodsList()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="detail_content">
+        <header id="detail_header">
+            <div class="detail_div">
+                <p>{{productDetail.detailData.broadBandName}}<span>{{productDetail.detailData.broadBandPrice}}元</span></p>
+                <em>{{productDetail.detailData.broadBandProfile}}</em>
+            </div>
+        </header>
+        <section id="detail_section">
+            <div class="detailFromInterface" ng-bind-html="productDetail.detailData.broadBandIntroduction">
+            </div>
+        </section>
+        <footer id="toBuyNow_footer">
+          <span class="lookStoreSpan" ng-click="productDetail.goToStore()">查看店铺</span> 
+           <span class="buynouSpan" ng-click="productDetail.toBuyNow()">立即预约</span>
+        </footer>
+    </ion-content>
+</ion-view>

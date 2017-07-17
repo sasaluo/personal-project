@@ -1,0 +1,48 @@
+<ion-view view-title="立即办理" hide-back-button="true" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="buyNow.goToCounterList()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="buynow">
+        <section id="poup" ng-if="buyNow.successBuy">
+            <div class="mask_div"></div>
+            <div class="poup_div">
+                <div>
+                    <span>恭喜，预约成功，请等候营业员处理！</span>
+                    <button ng-click="buyNow.goToCounterList()">确定</button>
+                </div>
+            </div>
+        </section>
+        <article ng-form="form">
+            <section id="buyNow_Session1">
+                <div class="borderDiv">
+                    <span>姓名</span>
+                    <input type="text" name="username" placeholder="请填写联系人姓名（必填）" ng-model="buyNow.item.name" required>
+                </div>
+                <div>
+                    <span>电话</span>
+                    <input type="text" mobile-only data="buyNow.item.telephone" placeholder="请填写联系人手机号码（必填）" ng-model="buyNow.item.telephone" required>
+                </div>
+            </section>
+            <section id="buyNow_Session2">
+                <div class="area_div">
+                    <span>所在地区</span>
+                    <div class="overlay_div">
+                        <select ng-model="buyNow.item.areaCode" ng-options="p.areacode as p.areaname for p in buyNow.shanghaiArea">
+                            <option value="">请填写联系人所在区县</option>
+                        </select>
+                        <div><img src="../img/common_under@3x-min.png"></div>
+                    </div>
+                </div>
+                <div class="areaDetail_div">
+                    <span>详细地址 </span>
+                    <textarea placeholder="请输入详细地址" ng-model="buyNow.item.addressDetail"></textarea>
+                </div>
+            </section>
+        </article>
+        <footer id="buyNow_footer">
+            <button ng-click="buyNow.appointmentNow()">立即预约</button>
+        </footer>
+    </ion-content>
+</ion-view>

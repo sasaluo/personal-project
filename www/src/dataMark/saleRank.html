@@ -1,0 +1,28 @@
+<ion-view view-title="统计排名" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="saleRank.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="topRank">
+        <header ui-sref="clerkRank"></header>
+        <section class="business">
+            <p>
+                <span class="bigsize">每日业务</span>
+                <span ui-sref="dailySale">点击查看更多</span>
+            </p>
+            <div class="dailyBusiness">
+                <canvas id="recentBusiness"></canvas>
+            </div>
+        </section>
+        <section class="share">
+            <p>
+                <span class="bigsizeTwo">每日分享</span>
+                <span ui-sref="dailyShare">点击查看更多</span>
+            </p>
+            <div class="dailyShare">
+                <canvas id="recentShare"></canvas>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

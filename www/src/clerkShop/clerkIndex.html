@@ -1,0 +1,34 @@
+<ion-view view-title="上海移动微店" hide-nav-bar="true">
+    <ion-nav-bar>
+        <ion-nav-buttons side="left">
+            <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="clerkIndex.exitApp()">
+                <em>返回</em>
+            </div>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <div id="shareStore" ng-click="clerkIndex.shareMyStore()"><i>店铺预览</i></div>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content id="clerkShop">
+        <header>
+            <img class="andImg" src="img/and@2x-min.png">
+            <div class="shareStore" ng-click="clerkIndex.shareMyStore()"><i>店铺预览</i></div>
+            <p class="storeImgsP" ui-sref="clerkQR">
+                <img class="storeImg" ng-if="clerkIndex.default" src="img/assistant_head@3x-min.png">
+                <img class="storeImg" ng-if="!clerkIndex.default" ng-src="{{clerkIndex.shopInfo.image}}">
+                <img class="qrImg" src="img/mystore_title_code@2x-min.png">
+            </p>
+            <h2>{{clerkIndex.shopInfo.shopName}}</h2>
+            <p class="weixinP">
+                <span><i></i>{{clerkIndex.shopInfo.telPhone}}</span>
+                <span><i class="weixin"></i>{{clerkIndex.shopInfo.weiXinNum}}</span>
+            </p>
+        </header>
+        <section>
+            <div ng-click="clerkIndex.goToProduct()"><img src="img/store_manage@3x-min.png">商品管理</div>
+            <div ng-click="clerkIndex.goBusiness()"><img src="img/store_mylist@3x-min.png">我的业务</div>
+            <div ui-sref="saleRank"><img src="img/store_statistics@3x-min.png">统计排名</div>
+            <div ng-click="clerkIndex.goToSetLoginInfo()"><img src="img/store_installe@3x-min.png">设置</div>
+        </section>
+    </ion-content>
+</ion-view>

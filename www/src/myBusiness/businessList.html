@@ -1,0 +1,29 @@
+<ion-view view-title="{{bussinessList.stateParam.storeName}}" hide-back-button="true" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="bussinessList.goToBusinssHanding()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content>
+        <section id="care_session">
+            <div class="list">
+                <div class="item item-icon-left noBorderLeft" 
+                ng-class="{notClick:item.storeStatus==2}"
+                ng-repeat="item in bussinessList.bussinessListData" ng-click="bussinessList.goToGoodsList($index,item,item.storeStatus)" ng-init="bussinessList.checkLast($last)">
+                    <span class="careName_span">
+                        <img class="careLogo_img" src="../img/assistant_head@3x-min.png">
+                        <em>{{item.displayName}}</em>
+                    </span>
+                    <span class="item-note handle_spanFont">
+                      <em ng-if="item.storeStatus==1">办理业务</em>
+                      <em ng-if="item.storeStatus==2">暂停办理</em>
+                      <img ng-if="item.storeStatus==1" class="rightArrow" src="../../img/common_right@3x-min.png">
+                      <img ng-if="item.storeStatus==2" class="rightArrow" src="../../img/goods_minus@3x-min.png" alt="">
+                    </span>
+                </div>
+            </div>
+        </section>
+        <ion-infinite-scroll ng-if="bussinessList.paging.isload" on-infinite="bussinessList.loadNext()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

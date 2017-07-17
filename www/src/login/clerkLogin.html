@@ -1,0 +1,38 @@
+<ion-view view-title="营业员登录" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="clerkLogin.counterGoodsList()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <!-- <ion-nav-bar class="bar-positive" align-title="center">
+	<ion-nav-back-button></ion-nav-back-button>  
+		<i class="ion-ios-arrow-left">返回</i>
+	  	 
+</ion-nav-bar> -->
+    <ion-content id="login">
+        <section>
+            <form name="userLogin" id="toLogin" novalidate>
+                <label for="userName">
+                    账号
+                    <input type="number" placeholder="请输入账号" name="account" ng-model="clerkLogin.account" ng-pattern="/^1[3|4|5|7|8]\d{9}$/" required>
+                </label>
+                <span ng-if="userLogin.account.$invalid && userLogin.account.$dirty">
+	 		<span class="errorTip" ng-if="userLogin.account.required">手机号码不能为空</span>
+                <span class="errorTip" ng-if="userLogin.account.$invalid">请输入正确手机号码</span>
+                </span>
+                <label for="userName">
+                    密码
+                    <input type="password" placeholder="请输入密码" name="password" ng-model="clerkLogin.password" ng-minlength=6 ng-maxlength=20 required>
+                </label>
+                <!-- <span ng-show="clerkLogin.userLogin.password.$invalid && clerkLogin.userLogin.password.$dirty"> -->
+                <!--  <span ng-if="clerkLogin.userLogin.password.$error.minlength ||clerkLogin.userLogin.password.$error.maxlength">密码长度为6-20位</span> -->
+                <span ng-show="userLogin.password.$invalid && userLogin.password.$dirty">
+			<span class="errorTip" ng-if="userLogin.password.required">请输入密码</span>
+                <span class="errorTip" ng-if="userLogin.password.$error">密码长度为6-20位</span>
+                </span>
+                <a class="login button button-positive" ng-disabled="userLogin.account.$invalid || userLogin.password.$invalid" ng-click="clerkLogin.loginVerify()">登录</a>
+            </form>
+            <a ui-sref="getVerifyCode" class="forgetPass">忘记密码</a>
+        </section>
+    </ion-content>
+</ion-view>

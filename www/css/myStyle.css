@@ -1,0 +1,157 @@
+/*-------------------------------------------businessHandling---------------------------------------------------*/
+.care_span{margin-top: 10px;font-size: 12px;margin-right: 15px;}
+#business_sess {background: #fff;padding: 5px 7.5px;width: 100%;padding-bottom: 15px;}
+#business_sess .businessHall{overflow: hidden}
+#business_sess  .float_div,#myCareStore_section .float_div{background: #fff; width: 50%;float: left;box-sizing: border-box;}
+#business_sess .districts{height:49px;line-height:49px;border-bottom: 1px solid #ddd;position: relative;}
+#business_sess .districts i{position: absolute;top:0px;right:10px;width:50px;height:50px;}
+#business_sess .districts i.arrowUp{transform: rotate(180deg)}
+#business_sess .districts i img{display:block;width:25%;height:25%;margin:18px auto;}
+.float_div div{font-size: 14px;border:1px solid #DDDDDD;color: #222222;  margin:5px 7.5px;height: 36px;line-height: 36px;text-align: center;border-radius: 2px;
+				border:1px solid #FC5327;color:#FC5327;}
+.actived div{border:1px solid #FC5327;color:#FC5327;}
+.business_footer{position: absolute;bottom: 0px;width: 100%;background: #fff;height: 60px; font-size: 14px; color: #1096F9; line-height: 60px;text-align: center;}
+#care_session{padding-left: 15px;background: #fff;}
+.rightArrow {width: 10px; height: 10px;display: inline-block;margin-left: 3px;}
+.careLogo_img{height: 26px;width: 26px;position: relative;top: 10px;left: -10px;}
+.careName_span{position: absolute;left: 15px;top: 5px;}
+.careName_span em{font-size: 12px;color: #333;position: relative;top: 3px;left: -5px;}
+.notClick em{color:#d8d8d8;}
+.handle_spanFont{font-size: 11px;}
+/*------------------------------------------------------------counter--------------------------------------------------------------------*/
+#counter_header{position: relative; background: url(../img/store_bg@3x-min.png) no-repeat center top;background-size: cover;height: 140px;width: 100%;}
+#counter_header .portrait_div{position: relative; height: 60px;width: 60px;border:1px #fff solid; border-radius: 50%;margin: 0 auto;top:10px;}
+#counter_header .portrait_div img{height: 100%;width: 100%;border-radius: 50%;}
+#counter_header .counterName_p{color: #fff;font-size: 18px;text-align: center;margin-top: 16px;}
+#counter_header .counterOther_Div{color: #fff;font-size: 13px;height: 18px;width: 100%;overflow: hidden;margin-top: 15px;}
+.counterOther_Div span{position: relative;float: left;box-sizing: border-box;width: 50%;text-align: center;}
+.counterOther_Div img{width: 18px;height: 18px}
+.counterOther_Div em{margin-left: 5px;position: relative;top: -5px;}
+#counter_header .tel_span {position: relative;left: 40px;height: 12px;line-height: 12px;}
+#counter_section{margin: 0 10px;}
+#counter_section span.noData{display: block;width:100%;text-align: center;font-size:14px;margin-top:50px;}
+#counter_section .store_div{position: relative; height: 107px;background: #fff;margin-top: 10px;padding: 15px;}
+#counter_section .title_p{margin-bottom: 8px;}
+#counter_section .title_p span{color:#2A2B3F;font-size: 15px;}
+#counter_section .title_p img{height: 17px;width: 17px;position: absolute;right: 15px;top: 16px;}
+#counter_section .descript_p{border-top:1px #D3D3D3 dashed;}
+#counter_section .descript_p em{margin-top: 6px;display: block;color: #4A4A4A;font-size: 11px;}
+#counter_section .descript_p span{color: #FC5327;font-size: 14px;display: block;margin-top: 5px;font-weight: bold;}
+#counter_section .title_p em{position: absolute;right: 35px; color: #4A4A4A;font-size: 11px;}
+/*-------------------------------------------------------productDetails-----------------------------------------------------------------*/
+#detail_content{background: #fff;}
+#detail_content .scroll{width: 100%; height: auto; padding-bottom: 60px; min-height:100%;}
+#detail_content img{width: 100%;height: 100%;}
+
+#detail_header {height: 90px;color: #333;border-bottom: 10px #f2f2f2 solid;}
+#detail_header .detail_div{padding: 15px;} 
+#detail_section {width: 100%;}
+#toBuyNow_footer button{height: 40px;background: #3391E9;color: #fff;border: none; border-radius: 5px;font-size: 16px;width: 95%;}
+#detail_section .detailFromInterface{margin:15px 15px 0px;}
+.detail_div p{position: relative; font-size: 18px;color: #333}
+.detail_div span{position: absolute; font-size: 14px;color:#FC5327;right:0;}
+.detail_div em{ font-size: 11px;color: #333;}
+.ion-chevron-left:before{display: block;position: absolute;font-size: 20px;left: 15px;top: 10px;}
+#goodslist_backBtn,#clerk{width: 100px;text-align: center;}
+#goodslist_backBtn em{position: absolute;left: 35px;top: 10px;font-size: 17px;}
+#clerk em{position: absolute;right: 25px;top: 8px;font-size: 12px;}
+#shareStore{width:80px;text-align:center;position: relative;}
+#shareStore i{font-style: normal;width:40px;height:20px;position: absolute;top:7px;right:20%;}
+/*-------------------------------------------------------buyNow--------------------------------------------------------------------------*/
+#buyNow_Session1{margin-bottom: 5px;border-bottom: 5px solid #f2f2f2; width: 100%; background: #fff;color: #222;font-size: 14px;}
+#buyNow_Session1 div{height: 50px;width: 100%; line-height: 50px;margin-left: 15px;}
+#buyNow_Session1 .borderDiv{border-bottom: 1px solid #d8d8d8;}
+#buyNow_Session1 input{position: relative;top: -45px;margin-left: 80px;width: 100%;}
+#buyNow_Session2{position: relative; height: 150px;background: #fff;width: 100%;color: #222;border-top: 1px solid #d8d8d8;border-bottom: 1px solid #d8d8d8;}
+#buyNow_Session2 .area_div{position: relative; height: 50px;margin-left: 15px;line-height: 50px;border-bottom: 1px solid #d8d8d8;}
+#buyNow_Session2 .areaDetail_div{margin-left: 15px;height: 100px;}
+#buyNow_Session2 .overlay_div{margin-left: 83px;}
+.overlay_div img{position: absolute;height: 14px;width: 14px;top: 18px;right: 30%;}
+.overlay_div div{position: absolute;top: 0px;z-index: 10;width: 100%}
+.overlay_div select{z-index: 11;position: relative;width: 100%;height: 47px;}
+.area_div span{position: absolute;}
+#areaChoose .areaDisplay_div{position: absolute; height: 120px;background: #fff;width: 100%;margin-left: 75px;overflow: scroll; }
+.areaDisplay_div p{margin:5px 0; margin-left: 11px;height: 24px;line-height: 24px;}
+.areaDetail_div span{position: relative;top: -18px;}
+#areaChoose{position: relative;top: -99px;}
+.area_div label,.colorGray{color: #aaaaaa;}
+
+
+.areaDetail_div textarea{display: inline-block; margin-left: 20px;margin-top: 12px;height: 72px;width: 70%;}
+#buyNow_footer { margin-top:20px;position: absolute;width: 100%;}
+#buyNow_footer button{width: 90%;margin-left: 5%; height: 40px;background: #3391E9;color: #fff;border: none; border-radius: 5px;font-size: 16px; }
+/*----------------------------------------------------------poup--------------------------------------------------------------------------------------------------------------*/
+#poup .mask_div{height: 100%;width: 100%;background: #4A4A4A;opacity: 0.5;position: fixed;z-index: 98;}
+#poup .poup_div{z-index: 99;color: #222;font-size: 14px;border-radius: 2px;height: 130px;background: #fff;position: absolute;width: 290px;top: 50%;margin-top: -65px;left: 50%;margin-left: -145px;}
+.poup_div div{margin-top: 25px;}
+.poup_div span{display: block; text-align: center;}
+.poup_div button{margin-top: 15px; position: relative;width: 135px;height: 36px;background: #3391E9;border:none;border-radius: 5px;color:#fff;left: 50%; margin-left: -65px;letter-spacing: 5px;}
+
+/*----------------------------------------------------my care--------------------------------------------------------------------------------------*/
+#myCare_header{font-size: 14px;color: #222222;font-weight: bold; height: 50px;background: #fff;margin-top: 10px;margin-bottom: 5px;}
+#myCare_header div{position: relative; float: left;width: 50%;box-sizing: border-box;text-align: center;line-height: 50px;}
+#myCare_header div:nth-child(1):after{position: absolute;display: block;content: "";width: 2px;height: 40%;-webkit-transform: scaleX(0.5);background-color: #979797;top: 15px;right: 0;}
+#myCareStore_section{background: #fff;padding-bottom: 15px;}
+/*-------------------------------------------------setInfo------------------------------------------------------------------------------------------------------------------*/
+#setSection{position: relative; height: 100px;background: #fff;}
+.setImg{position: absolute; height: 20px;width: 20px;left: 15px;top: 15px;}
+.setDiv{position: relative; height: 50px;line-height: 50px;}
+.setDiv p{margin-left: 45px;}
+#setFooter{position: relative; height: 50px;background: #fff;margin-top:10px;border-top:1px #D8D8D8 solid;border-bottom:1px #D8D8D8 solid;}
+#setFooter .ion-ios-arrow-right:before{position: absolute;right: 15px;top: 15px;font-size: 20px;color: #999;}
+#setSection .ion-ios-arrow-right:before{position: absolute;right: -27px;top: 15px;font-size: 20px;color: #999;}
+.after-border-bottom:after{display: block;content: '';background: #D8D8D8; bottom: 0;margin-left: 15px; width: 93%;height: 1px;-webkit-transform: scaleY(0.5);}
+.setSpan{position: absolute;right: 42px;color: #999;font-size: 12px;}
+#changePassword_article{height: 100%;background: #fff;}
+.inputPassWord_sec div{margin:0 15px;border-bottom:1px #DDD solid;}
+#changePassword_article input{border:none;height: 50px;width: 100%}
+#changePass_Footer,#editStore_Footer {margin-top:20px;height: 40px;}
+.btn_confirmPass{background: #3390E8;width: 90%;margin:0 auto;color:#fff;height: 40px;line-height: 40px;text-align: center;border-radius: 5px;letter-spacing: 5px;}
+/*--------------------------------------------------edit store----------------------------------------------------------------------------------------*/
+#editStore header{position: relative; height: 144px;}
+#editStore .editStore_sec{height: 200px;background: #fff;}
+.editStore_sec div{position: relative; height: 50px;margin-left: 15px;border-bottom: 1px #D8D8D8 solid;line-height: 50px;}
+.editStore_sec div:nth-last-child(1){border-bottom: none;}
+
+.editStore_sec input{border: none;height: 40px;margin-left: 15px;width: 79%;display: inline-block;}
+#editStore .ion-ios-checkmark:before,#editStore .ion-ios-circle-outline:before{position: absolute;right: 40px;font-size: 20px;top: 15px;}
+#editStore .ion-ios-checkmark:before{color: #3390E8;}
+.editHeader_div {position: absolute;top:50%;margin-top:-40px; left: 50%;margin-left: -30px; width: 60px;height:80px;}
+#progressBar{width:100px;height:40px;position: relative;text-align: center;}
+#progressBar span{display:block;background:#3390E8;height:20px;position: absolute;left:0;top:0;min-width: 10px;border-radius:2px;}
+#progressBar i{position: absolute;bottom:0;left:0;width:100%;text-align: center;height:20px;line-height: 20px}
+.editHeader_div input{-webkit-appearance: none; width: 100%; height: 100%; opacity: 0; overflow: hidden; position: absolute; left:0; top:0; z-index:-1; }
+
+.editHeader_div button{width:60px;height:60px;position: absolute;top:0;left:0;z-index: -1; }
+.editStoreImg{height: 60px;width: 60px;border: 1px solid #fff;border-radius: 50%;position: absolute;top:0;left:0;z-index:2;}
+.editHeader_div p{color: #999;text-align: center;height: 20px;line-height: 20px;position: absolute;bottom:0;left:0;font-size:14px;}
+.btnInvalid{opacity:0.65;}
+.editStoreError{position: relative;top: -50px;margin-left: 60%;}
+#toBuyNow_footer{position: absolute; bottom: 10px; height: 42px; width: 100%; margin-left: -2.5%; overflow: hidden;}
+#toBuyNow_footer .lookStoreSpan{background: #F99A00; border-radius: 5px;display: inline-block;color:#fff;font-size: 16px;height: 40px;line-height: 40px;}
+#toBuyNow_footer .buynouSpan{background: #1096F9; border-radius: 5px;display: inline-block;color:#fff;font-size: 16px;height: 40px;line-height: 40px;}
+#toBuyNow_footer span{float: left; margin-left: 5%; width: 45%; text-align: center; box-sizing: border-box;}
+#clerkShop .shareStore{position: absolute;display: inline-block;right: 15px;top: 10px;}
+#clerkShop .qrImg{height: 20px; width: 20px; position: absolute; top: 30px; margin-left: 10px;}
+#clerkShop .andImg{height: 25px;width: 40px;position: absolute;left: 15px;top: 5px;}
+#clerkShop .storeImgsP{width: 100px; display: inline-block; position: relative;}
+#clerkShop .weixinP{height: 30px; position: relative; margin: 0 auto; margin-top: 10px; width: 80%;}
+#clerkQR{background: #fff;}
+#clerkQR .qrcodeSec{margin-top: 45px; width: 100%;}
+#clerkQR .qrcodeSec>div{margin: 0 auto;width: 200px;}
+#clerkQR .lookP{font-size: 16px; color: #666666; margin-top: 25px;text-align: center;}
+#counter_section .lookMoreP{text-align: center; font-size: 11px; color: #666; height: 50px; line-height: 50px;}
+#goodsListSec{background: #fff; width: 100%; padding-left: 2%; margin-top: 10px;}
+#goodsListSec .goodsListdiv{margin-left: -2%;width: 100%;}
+#goodsListSec .recommandP{text-align: center; font-size: 11px; color: #666666;height: 42px;line-height: 42px; }
+
+#goodsListSec .goodsRepeat{margin-bottom: 10px; position: relative; float: left;margin-left: 2%;width: 48%;box-sizing: border-box;height: 230px; border: 1px solid rgba(217,217,217,0.50);}
+#goodsListSec .goodsImg{height: 165px;}
+#goodsListSec .goodsImg img{height: 100%;width: 100%;}
+#goodsListSec .productNameP{font-size: 13px; color: #000000;padding:0 10px;display: -webkit-box;text-overflow: ellipsis;-webkit-box-orient:vertical;overflow: hidden;-webkit-line-clamp:2;} 
+#goodsListSec .sellPriceP{font-size: 16px; color: #FB0246;font-weight: bold;padding-left: 10px;position: absolute;bottom: 5px}
+
+.shanghaiWei{height: 140px;width: 100%;background: url("../img/backgruoun-min.png") no-repeat;background-size: cover;}
+.storeTitleP{width: 75px; margin: 0 auto; padding-top: 35px;} 
+.titleAndImg{height: 100%;width: 100%;}
+.storeAndP{font-size: 18px; color: #FFFFFF; text-align: center; padding-top: 10px;}

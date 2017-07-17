@@ -1,0 +1,22 @@
+<ion-view view-title="设置" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="setContent.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content>
+        <section id="setSection">
+            <div class="setDiv after-border-bottom" ng-click="setContent.changePassword()"><img class="setImg" src="../img/my_set_changepwd@3x-min.png">
+                <p>修改密码<span class="ion-ios-arrow-right setSpan">修改用户密码</span></p>
+            </div>
+            <div class="setDiv" ng-click="setContent.setStoreInfo()"><img class="setImg" src="../img/my_set_version@3x-min.png">
+                <p>设置店铺<span class="ion-ios-arrow-right setSpan">设置店铺信息</span></p>
+            </div>
+        </section>
+        <footer id="setFooter">
+            <div class="setDiv" ng-click="setContent.isCancelAccount()"><img class="setImg" src="../img/my_set_quit@3x-min.png">
+                <p class="ion-ios-arrow-right">注销账户</p>
+            </div>
+        </footer>
+    </ion-content>
+</ion-view>

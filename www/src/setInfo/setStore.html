@@ -1,0 +1,44 @@
+<ion-view view-title="店铺设置" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="setStore.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="editStore">
+        <header ng-click="setStore.chooseMethod()">
+            
+            <div id="imgLogo" class="editHeader_div">
+                <img ng-if="!setStore.progerssing" id="imgBox" class="editStoreImg" ng-src="{{setStore.imgLogo}}">
+                <div id="progressBar" ng-if="setStore.progerssing">
+                    <span id="bars"></span>
+                    <i>{{setStore.percentage}}</i>
+                </div>
+                <button id="uploadImg" type="file" class="button" name="file" ng-model="file" 
+                ngf-resize="{width:300}"
+                ngf-pattern="'image/*'" ngf-accept="'image/*'" ngf-max-size="10MB" ngf-select="setStore.uploadFiles($file)"></button>
+                <p>更改头像</p>
+            </div>
+        </header>
+        <section class="editStore_sec" ng-form name="editForm">
+            <div><span>店铺名</span>
+                <input type="text" name="storeName" ng-model="setStore.editStore.storeName" required>
+                <em class="has_error editStoreError" ng-if="editForm.storeName.$invalid">店铺名不能为空</em>
+            </div>
+            <div><span>微信号</span>
+                <input type="text" name="weichatName" ng-model="setStore.editStore.weixinNum" required>
+                <!-- <em class="has_error editStoreError" ng-if="editForm.weichatName.$invalid">微信号不能为空</em> -->
+            </div>
+            <div><span>手机号</span>
+                <input type="number" name="telephone" ng-pattern="/^[1][34578][0-9]{9}$/" ng-model="setStore.editStore.telephone" required>
+                <em class="has_error editStoreError" ng-if="editForm.telephone.$invalid && !editForm.telephone.$error.pattern">手机号不能为空</em>
+                <em class="has_error editStoreError" ng-if="editForm.telephone.$error.pattern">手机号码有误</em>
+            </div>
+            <div ng-click="setStore.switchShowTel()"><span ng-class="{'ion-ios-checkmark':setStore.isShowTel==1,'ion-ios-circle-outline':setStore.isShowTel==0}">是否显示</span></div>
+        </section>
+        <footer id="editStore_Footer">
+            <div class="btn_confirmPass" ng-class="{'btnInvalid':editForm.storeName.$invalid||editForm.telephone.$invalid}" ng-disabled="editForm.storeName.$invalid||editForm.telephone.$invalid" ng-click="setStore.submitStoreInfo()">
+                确认
+            </div>
+        </footer>
+    </ion-content>
+</ion-view>

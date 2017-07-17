@@ -1,0 +1,46 @@
+<ion-view view-title="上海移动微店-商品" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="productUpload.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="productManage">
+        <header class="row">
+            <span ng-repeat="item in productUpload.isUpLoad" class="col col-50" ng-class="{choosed:productUpload.mark==($index+1)}" ng-click="productUpload.getBrands($index+1)">{{item.state}}</span>
+        </header>
+        <section>
+            <div id="emptyData" ng-if="productUpload.singlePage.length==0">
+                <img src="img/my_empty@3x.png">
+                <span>抱歉，暂无数据！</span>
+            </div>
+            <div class="productInfo" ng-repeat="item in productUpload.businessLists" ng-if="productUpload.businessLists">
+                <h2 ng-click="productUpload.goDetails(item.id)">{{item.broadBandName}}
+                        <span class="details">详情<img src="img/goods_detail@3x-min.png" alt=""></span>
+                </h2>
+                <div class="profile">
+                    <p>{{item.broadBandProfile}}</p>
+                    <span class="price">资费：{{item.broadBandPrice}}元</span>
+                    <a ng-if="productUpload.mark==2" ng-click="productUpload.loadProduct(0,item.id,$index)">
+                        <img src="img/goods_add@3x.png">
+                        <span>添加</span>
+                    </a>
+                    <div ng-if="productUpload.mark==1">
+                        <span ng-click="productUpload.loadProduct(1,item.id,$index)">
+                            <img src="img/goods_down@3x.png">
+                            <span>下架</span>
+                        </span>
+                      <!--   <a ng-click="productUpload.shareGoods(item.id)">
+                            <img src="img/goods_share@3x.png">
+                            <span>分享</span>
+                        </a> -->
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <span class="loadAll" ng-if="productUpload.tatalRecord!=productUpload.paramters.pageSize">全部产品加载完毕</span>
+
+        <ion-infinite-scroll on-infinite="productUpload.loadMore()" ng-if="productUpload.tatalRecord && (productUpload.tatalRecord==productUpload.paramters.pageSize)" distance="1%" immediate-check=false> </ion-infinite-scroll>
+    
+    </ion-content>
+</ion-view>

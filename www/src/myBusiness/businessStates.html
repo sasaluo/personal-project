@@ -1,0 +1,31 @@
+<ion-view view-title="我的业务" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="businessStates.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="myBusiness">
+        <header class="row">
+            <span class="col col-50 " ng-class="{choosed:businessStates.Status==2}" ng-click="businessStates.businessDisplay(2)">已处理</span>
+            <span class="col col-50 uploaded" ng-class="{choosed:businessStates.Status==1}" ng-click="businessStates.businessDisplay(1)">待处理</span>
+        </header>
+        <section>
+            <div id="emptyData" ng-if="!businessStates.lists">
+                <img src="img/my_empty@3x.png">
+                <span>抱歉，暂无数据！</span>
+            </div>
+            <div class="businessDetail" ng-repeat="item in businessStates.lists" ng-click="businessStates.doBusiness(item.orderNo)">
+                <h2>{{item.broadBandName}} 
+                    <span  ng-class="{'green':item.reservationState==2,'red':item.reservationState==3}">{{item.orderStatus}}</span>
+                </h2>
+                <div>
+                    <span>{{item.customerName}}</span>
+                    <p>上海{{item.areaName}}{{item.installAddress}}</p>
+                    <div>{{item.orderNo}}
+                        <time>{{item.createDate}}</time>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

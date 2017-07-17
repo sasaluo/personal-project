@@ -1,0 +1,47 @@
+<ion-view view-title="选择营业厅" hide-back-button="true" hide-nav-bar="true">
+    <ion-nav-bar>
+        <ion-nav-buttons side="left">
+            <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="businessHandling.gobackToApp()">
+                <em>返回</em>
+            </div>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right">
+            <div id="clerk" ui-sref="clerkLogin">
+                <em>营业员登录</em>
+            </div>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-content>
+        <header class="shanghaiWei">
+            <p class="storeTitleP">
+                <img class="titleAndImg" src="img/and@2x-min.png">
+            </p>
+            <p class="storeAndP">上海移动微店</p>
+        </header>
+        <section id="business_sess" class="clearfix">
+
+            <div ng-repeat="item in businessHandling.storeData"> 
+                
+           
+                <div class="districts" ng-click="businessHandling.toggleHall($index)">
+                    <span>{{item.area}}</span>
+                    <i 
+                    ng-class='
+            {arrowUp:(businessHandling.showHall==true&&$index==businessHandling.arrowIndex)}'>
+
+                        <img ng-src="img/common_under@3x-min.png" alt="">
+                    </i>
+                </div>
+                <div class="businessHall" ng-if="businessHandling.showHall==true&&$index==businessHandling.arrowIndex">
+                    <div class="float_div" ng-repeat="val in item.halls" 
+                    ng-click="businessHandling.goTostoreList(val.id,val.name)">
+                       <div>{{val.name}}</div>                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </ion-content>
+    <footer class="business_footer" ui-sref="clerkLogin">
+        营业员登录
+    </footer>
+</ion-view>

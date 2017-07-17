@@ -1,0 +1,23 @@
+<ion-view view-title="营业员排名" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="clerkRank.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="clerkRank">
+        <header>营业员姓名
+            <div class="business" ng-click="clerkRank.orderQuery(4,orderByBusiness)" ng-class="{'trangle-down':clerkRank.decrease}">业务量
+                <img src="img/common_up@3x.png">
+            </div>
+            <div class="share" ng-click="clerkRank.shareQuery(2,orderByShare)" ng-class="{'share-down':!clerkRank.descShare}">分享量
+                <img src="img/common_down@3x.png">
+            </div>
+        </header>
+        <section>
+            <div ng-repeat="item in clerkRank.businessLists">
+                {{item.storeName}}<span class="business">{{item.saleOrders}}</span>
+                <span class="share">{{item.saleShare}}</span>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

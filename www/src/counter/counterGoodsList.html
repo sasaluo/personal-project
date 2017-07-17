@@ -1,0 +1,70 @@
+<ion-view view-title="{{counterGoodsList.stateParam.displayName}}" hide-back-button="true" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="counterGoodsList.bussinessList()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content delegate-handle="listAll">
+        <header id="counter_header">
+            <div class="portrait_div">
+                <img ng-if="counterGoodsList.default" src="../img/assistant_head@3x-min.png">
+                <img ng-if="!counterGoodsList.default" ng-src="{{counterGoodsList.masterInfo.logo}}">
+            </div>
+            <p class="counterName_p">{{counterGoodsList.masterInfo.storeName}}</p>
+            <div class="counterOther_Div">
+                <span><img src="../img/store_phone@3x-min.png">
+                <em ng-if="counterGoodsList.masterInfo.isShowPhoneNo==1">{{counterGoodsList.masterInfo.telephone}}</em>
+                </span>
+                <span class="wechat_span"><img src="../img/store_wechat@3x-min.png">
+                <em  ng-if="counterGoodsList.masterInfo.isShowPhoneNo==1">{{counterGoodsList.masterInfo.weiXin}}</em></span>
+            </div>
+        </header>
+        <section id="counter_section">
+
+            <span class="noData" ng-if="!counterGoodsList.allStoreData">抱歉、暂无数据</span>
+            <div ng-if="counterGoodsList.storeData.length>0" class="store_div" ng-repeat="item in counterGoodsList.storeData" >
+                <p class="title_p" ng-click="counterGoodsList.toDetail(item)">
+                    <span>{{item.broadBandName}}</span>
+                    <em>详情</em><img src="../img/goods_detail@3x-min.png">
+                </p>
+                <p class="descript_p">
+                    <em>
+                       {{item.broadBandProfile}}
+                   </em>
+                    <span>
+                       资费：{{item.broadBandPrice}}元
+                   </span>
+                </p>
+            </div>
+            <p class="lookMoreP" ng-click="counterGoodsList.lookMore()" ng-if="counterGoodsList.allStoreData && counterGoodsList.allStoreData.length>2 && !counterGoodsList.isLookMore">查看更多</p>
+             <div ng-if="counterGoodsList.isLookMore" class="store_div" ng-repeat="item in counterGoodsList.storeDataMore" ng-init="counterGoodsList.checkLast($last)">
+                <p class="title_p" ng-click="counterGoodsList.toDetail(item.id)">
+                    <span>{{item.broadBandName}}</span>
+                    <em>详情</em><img src="../img/goods_detail@3x-min.png">
+                </p>
+                <p class="descript_p">
+                    <em>
+                       {{item.broadBandProfile}}
+                   </em>
+                    <span>
+                       资费：{{item.broadBandPrice}}元
+                   </span>
+                </p>
+            </div>
+             <p class="lookMoreP" ng-if="counterGoodsList.isLookMore" ng-click="counterGoodsList.packUp()">收起</p>
+        </section>
+        <section id="goodsListSec" ng-if="counterGoodsList.goodsList" >
+        <p class="recommandP">为您推荐</p>
+        <div class="clearfix  goodsListdiv">
+             <div class="goodsRepeat" ng-repeat = "item in counterGoodsList.goodsList" ng-click="counterGoodsList.goToDetail(item.previewUrl)" ng-init="counterGoodsList.checkLast($last)">
+                <p class="goodsImg"><img ng-src="{{item.image300300}}"></p>
+                <p class="productNameP">{{item.productName}}</p> 
+                <p class="sellPriceP">{{item.sellPrice|currency:"￥"}}</p>
+            </div>
+        </div>
+           
+        </section>
+        <ion-infinite-scroll ng-if="counterGoodsList.pagingGoods.isload" on-infinite="counterGoodsList.loadNext()" distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

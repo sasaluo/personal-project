@@ -1,0 +1,15 @@
+{
+    "packageTitle": "4G飞享套餐-180元版",
+    "subTitle": "宽带1户+电视一部+手机号1个",
+    "sellPrcie": "66",
+    "details": {
+        "thePackage": "飞享88",
+        "freePhoneMonth": "20",
+        "lastAmount": "58",
+        "returnScore": [
+        	{ "score": "116", "summery": "三星级以上" },
+            { "score": "223", "summery": "四星级以上" },
+            { "score": "500", "summery": "五星级以上" }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+<ion-view view-title="我的店铺-二维码" hide-nav-bar="true">
+    <ion-content id="clerkQR">
+        <header id="counter_header">
+            <div class="portrait_div">
+                <img ng-if="clerkQR.default" src="../img/assistant_head@3x-min.png">
+                <img ng-if="!clerkQR.default" ng-src="{{clerkQR.masterInfo.storeLogo}}">
+            </div>
+            <p class="counterName_p">{{clerkQR.masterInfo.storeName}}</p>
+            <div class="counterOther_Div">
+                <span><img src="../img/store_phone@3x-min.png">
+                <em>{{clerkQR.masterInfo.otherContacts}}</em>
+                </span>
+                <span class="wechat_span"><img src="../img/store_wechat@3x-min.png">
+                <em>{{clerkQR.masterInfo.weiXinNum}}</em></span>
+            </div>
+        </header>
+        <section class="qrcodeSec">
+            <div>
+                <qrcode version="8" size="200" data="{{clerkQR.storeInfoUrl}}" error-correction-level="High"></qrcode>
+            </div>
+            <p class="lookP">扫描查看我的店铺</p>
+        </section>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,18 @@
+<ion-view view-title="我关注的">
+    <ion-content>
+        <header id="myCare_header" class="clearfix">
+        	<div class="borderBottom">营业厅</div>
+        	<div>营业员</div>
+        </header>
+        <section id="myCareStore_section" class="clearfix">
+        	 <div class="float_div" ng-repeat="item in myCareInfo.storeData" ng-click="myCareInfo.goTostoreList(item.storeName)">
+                <div>
+                    <span>
+	       			{{item.storeName}}
+	       			</span>
+                </div>
+            </div>
+        </section>
+        <section id="myCareCounter_section"></section>
+    </ion-content>
+</ion-view>

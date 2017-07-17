@@ -1,0 +1,23 @@
+<ion-view view-title="每日分享"  hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="dailyShare.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="dailyShare">
+        <section class="business">
+            <p>
+                <span class="bigsize">每日分享</span>
+                <span>默认显示最近十天</span>
+            </p>
+            <div class="daily">
+                <canvas id="recentSale"></canvas>
+            </div>
+        </section>
+        <div class="details">
+            <p class="column row"><span>日期</span><span>每日分享</span></p>
+            <p class="dates" ng-repeat="item in dailyShare.shareDatas"><span>{{item.saleDate}}</span>
+                <span class="amount">{{item.saleAmount}}</span></p>
+        </div>
+    </ion-content>
+</ion-view>

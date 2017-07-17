@@ -1,0 +1,36 @@
+<ion-view view-title="业务办理" hide-nav-bar="true">
+    <ion-nav-buttons>
+        <div id="goodslist_backBtn" class="ion-chevron-left" ng-click="doBusiness.goPrev()">
+            <em>返回</em>
+        </div>
+    </ion-nav-buttons>
+    <ion-content id="handleBusiness">
+         <section>
+            <p><span>业务类型：</span><a class="reservation">宽带预约</a></p>
+            <p><span>订单编号：</span><a>{{doBusiness.list.orderNo}}</a></p>
+            <p><span>预约时间：</span><a>{{doBusiness.list.createDate}}</a></p>
+            <p><span>业务名称：</span><a class="blueColor">{{doBusiness.list.broadBandName}}</a></p>
+            <div>
+                <em>预约信息：</em>
+                <p>
+                    <span>{{doBusiness.list.customerName}}</span>
+                    <span class="inMiddle">{{doBusiness.list.telephone}}</span>
+                    <span>{{doBusiness.list.installAddress}}</span>
+                </p>
+            </div>
+            <p class="orderState"><span>订单状态：</span><a>订单状态一经选择，不可修改，请慎重选择</a></p>
+            <p class="operate">
+                <span>订单操作：</span>
+                <i ng-if="!doBusiness.moreOption">{{doBusiness.list.orderStatus}}</i>
+                <select ng-if="doBusiness.moreOption" ng-model="doBusiness.indexCode" ng-options="item.index as item.name for item in doBusiness.states"
+                ng-change="doBusiness.changeState(doBusiness.indexCode)">
+                    <option value="">{{doBusiness.list.orderStatus}}</option>
+                </select>
+                <img ng-if="doBusiness.moreOption" src="img/Group Copy.png"> 
+            </p>
+             
+         </section>
+         <a ng-if="doBusiness.moreOption" class="makeSure button button-positive" ng-click="doBusiness.makeSure()">确定</a>
+       
+    </ion-content>
+</ion-view>
